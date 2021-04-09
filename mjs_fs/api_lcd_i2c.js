@@ -4,6 +4,8 @@ let LCD_I2C = {
     _bgn: ffi('void mgos_lcd_i2c_begin(void *, int, int, int)'),
     _clr: ffi('void mgos_lcd_i2c_clear(void *)'),
     _hom: ffi('void mgos_lcd_i2c_home(void *)'),
+    _disp: ffi('void mgos_lcd_i2c_display(void *)'),
+    _noDisp: ffi('void mgos_lcd_i2c_noDisplay(void *)'),
     _stcrs: ffi('void mgos_lcd_i2c_setCursor(void *, int, int)'),
     _prntchar: ffi('void mgos_lcd_i2c_print(void *, char *)'),
     _prntdouble: ffi('void mgos_lcd_i2c_printDouble(void *, double, int)'),
@@ -36,6 +38,12 @@ let LCD_I2C = {
         },
         home: function () {
             return LCD_I2C._hom(this.lcd);
+        },
+        display: function () {
+            return LCD_I2C._disp(this.lcd);
+        },
+        noDisplay: function () {
+            return LCD_I2C._noDisp(this.lcd);
         },
         setCursor: function (row, col) {
             return LCD_I2C._stcrs(this.lcd, row, col);

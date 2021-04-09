@@ -14,6 +14,10 @@ void mgos_lcd_i2c_clear(LiquidCrystal_I2C *lcd);
 
 void mgos_lcd_i2c_home(LiquidCrystal_I2C *lcd);
 
+void mgos_lcd_i2c_display(LiquidCrystal_I2C *lcd);
+
+void mgos_lcd_i2c_noDisplay(LiquidCrystal_I2C *lcd);
+
 void mgos_lcd_i2c_setCursor(LiquidCrystal_I2C *lcd, uint8_t, uint8_t);
 
 void mgos_lcd_i2c_print(LiquidCrystal_I2C *lcd, const char[]);

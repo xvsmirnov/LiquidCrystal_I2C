@@ -29,6 +29,18 @@ void mgos_lcd_i2c_home(LiquidCrystal_I2C *lcd) {
     }
 }
 
+void mgos_lcd_i2c_display(LiquidCrystal_I2C *lcd) {
+    if (lcd != nullptr) {
+        lcd->display();
+    }
+}
+
+void mgos_lcd_i2c_noDisplay(LiquidCrystal_I2C *lcd) {
+    if (lcd != nullptr) {
+        lcd->noDisplay();
+    }
+}
+
 void mgos_lcd_i2c_setCursor(LiquidCrystal_I2C *lcd, uint8_t col, uint8_t row) {
     if (lcd != nullptr) {
         lcd->setCursor(col, row);
